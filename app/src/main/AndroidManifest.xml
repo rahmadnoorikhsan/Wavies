@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ranosan.wavies">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Wavies"
         tools:targetApi="31">
-        <activity android:name=".ui.splash.RoutingActivity"
+        <activity
+            android:name=".ui.splash.RoutingActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
@@ -26,7 +28,7 @@
         </activity>
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ui.detail.DetailActivity"
             android:exported="false" />

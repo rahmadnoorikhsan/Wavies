@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
                 }
                 is Resource.Loading -> {}
                 is Resource.Success -> {
-                    adapter.submitList(resources.data)
+                    adapter.submitList(resources.data.take(5))
                 }
             }
         }
@@ -129,7 +129,7 @@ class HomeFragment : Fragment() {
             rvTrending.setHasFixedSize(true)
             rvTrending.adapter = adapter
         }
-        viewModel.trendingMovies.observe(viewLifecycleOwner) { resources ->
+        viewModel.nowPlayingMovies.observe(viewLifecycleOwner) { resources ->
             when (resources) {
                 is Resource.Error -> {}
                 is Resource.Loading -> {}
