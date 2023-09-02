@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Wavies</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="trending">Trending</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="upcoming_movies">Up Coming</string>
+    <string name="top_rated_movies">Top Rated</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="rating">Rating</string>
+    <string name="language">Language</string>
+    <string name="release">Release</string>
+    <string name="bullet">•</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_search">Module Title</string>
+    <string name="now_playing">Now Playing</string>
+</resources>

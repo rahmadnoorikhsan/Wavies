@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="24.dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:elevation="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_image"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_now_playing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/now_playing"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/md_theme_dark_onBackground"
+        app:drawableEndCompat="@drawable/ic_chevron_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vp_image"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Now Playing"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_trending"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/text_now_playing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_popular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/popular_movies"
+        android:textColor="@color/md_theme_dark_onBackground"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_chevron_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_trending"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popular"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/text_popular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_upcoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/upcoming_movies"
+        android:textColor="@color/md_theme_dark_onBackground"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_chevron_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_popular"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_upcoming"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/text_upcoming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_top_rated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/top_rated_movies"
+        android:textColor="@color/md_theme_dark_onBackground"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_chevron_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_upcoming"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top_rated"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/text_top_rated"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

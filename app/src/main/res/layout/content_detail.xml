@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@tools:sample/avatars"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/gradient_bottom_top_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/iv_backdrop"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_poster"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        android:layout_width="144dp"
+        android:layout_height="216dp"
+        android:transitionName="iv_movie"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        app:layout_constraintStart_toStartOf="@id/iv_backdrop"
+        app:layout_constraintEnd_toEndOf="@id/iv_backdrop"
+        app:layout_constraintTop_toBottomOf="@id/iv_backdrop"
+        app:layout_constraintBottom_toBottomOf="@id/iv_backdrop"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_poster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Waktu Maghrib"/>
+
+    <TextView
+        android:id="@+id/tv_genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/bullet"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Horror"/>
+
+    <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:lineSpacingMultiplier="1.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_genres"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"/>
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/release"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/text_language"
+        app:layout_constraintTop_toTopOf="@id/text_language"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/text_date"
+        app:layout_constraintStart_toStartOf="@id/text_date"
+        app:layout_constraintEnd_toEndOf="@id/text_date"
+        tools:text="2022"/>
+
+    <TextView
+        android:id="@+id/text_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/language"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_overview"/>
+
+    <TextView
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/text_language"
+        app:layout_constraintStart_toStartOf="@id/text_language"
+        app:layout_constraintEnd_toEndOf="@id/text_language"
+        tools:text="en"/>
+
+    <TextView
+        android:id="@+id/text_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/rating"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/text_language"
+        app:layout_constraintTop_toTopOf="@id/text_language"/>
+
+    <TextView
+        android:id="@+id/tv_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/text_rating"
+        app:layout_constraintStart_toStartOf="@id/text_rating"
+        app:layout_constraintEnd_toEndOf="@id/text_rating"
+        tools:text="8.7"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/thumbnail_view"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_language"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

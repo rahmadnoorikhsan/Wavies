@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_movie"
+        android:layout_width="80dp"
+        android:layout_height="104dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="SpiderMan Home Coming - 2022"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toEndOf="@id/iv_movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="22 Mar 2022"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

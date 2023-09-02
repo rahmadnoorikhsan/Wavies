@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_nav_host"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.dynamicfeatures.fragment.DynamicNavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_main"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/item_bg"
+        android:outlineAmbientShadowColor="@color/md_theme_dark_surface"
+        app:itemIconTint="@drawable/bg_navigation_item"
+        app:menu="@menu/main_nav_menu"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemRippleColor="@null"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:targetApi="p" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

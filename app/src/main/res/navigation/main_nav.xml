@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.ranosan.wavies.ui.detail.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" >
+        <argument
+            android:name="movie"
+            app:argType="com.ranosan.wavies.core.domain.model.Movie" />
+    </activity>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ranosan.wavies.ui.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.ranosan.wavies.favorite.FavoriteFragment"
+        app:moduleName="favorite"
+        android:label="FavoriteFragment">
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.ranosan.wavies.ui.main.movies.MoviesFragment"
+        android:label="fragment_movies"
+        tools:layout="@layout/fragment_movies" >
+        <argument
+            android:name="movieType"
+            app:argType="com.ranosan.wavies.core.domain.model.MovieType" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_moviesFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.ranosan.wavies.search.SearchFragment"
+        app:moduleName="search"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+</navigation>
