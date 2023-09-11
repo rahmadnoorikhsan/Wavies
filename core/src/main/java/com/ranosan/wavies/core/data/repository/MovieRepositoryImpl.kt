@@ -7,7 +7,6 @@ import com.ranosan.wavies.core.domain.model.MovieType
 import com.ranosan.wavies.core.domain.repository.MovieRepository
 import com.ranosan.wavies.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton

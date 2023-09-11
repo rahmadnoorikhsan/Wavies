@@ -23,7 +23,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.ranosan.wavies.core.ui.adapter.LoadingStateAdapter
 import com.ranosan.wavies.core.ui.adapter.MoviePagingAdapter
 import com.ranosan.wavies.databinding.FragmentMoviesBinding

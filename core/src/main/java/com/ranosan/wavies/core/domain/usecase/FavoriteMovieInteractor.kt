@@ -1,8 +1,6 @@
 package com.ranosan.wavies.core.domain.usecase
 
-import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.domain.repository.MovieRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class FavoriteMovieInteractor @Inject constructor(
