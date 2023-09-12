@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val movieUseCase: MovieUseCase,
-    private val moviePagingUseCase: MoviePagingUseCase
+    moviePagingUseCase: MoviePagingUseCase
 ): ViewModel() {
     val query = MutableStateFlow("")
 

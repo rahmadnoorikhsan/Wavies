@@ -27,7 +27,5 @@
     <color name="md_theme_dark_inverseSurface">#E4E1E6</color>
     <color name="md_theme_dark_inversePrimary">#2B4EDE</color>
     <color name="md_theme_dark_shadow">#000000</color>
-    <color name="md_theme_dark_surfaceTint">#B9C3FF</color>
     <color name="md_theme_dark_outlineVariant">#46464F</color>
-    <color name="md_theme_dark_scrim">#000000</color>
 </resources>

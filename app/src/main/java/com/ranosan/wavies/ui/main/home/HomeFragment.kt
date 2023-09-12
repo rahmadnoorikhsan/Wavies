@@ -123,11 +123,11 @@ class HomeFragment : Fragment() {
             moveToDetail(movie, imageView)
         }
         binding?.contentHome?.apply {
-            rvTrending.layoutManager = LinearLayoutManager(
+            rvNowPlaying.layoutManager = LinearLayoutManager(
                 context, LinearLayoutManager.HORIZONTAL, false
             )
-            rvTrending.setHasFixedSize(true)
-            rvTrending.adapter = adapter
+            rvNowPlaying.setHasFixedSize(true)
+            rvNowPlaying.adapter = adapter
         }
         viewModel.nowPlayingMovies.observe(viewLifecycleOwner) { resources ->
             when (resources) {
@@ -217,8 +217,8 @@ class HomeFragment : Fragment() {
         binding?.contentHome?.vpImage?.setPageTransformer(transformer)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 }

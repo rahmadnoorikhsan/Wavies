@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
 import com.ranosan.wavies.core.databinding.ItemMovieBinding
 import com.ranosan.wavies.core.domain.model.Movie
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
 
 class MovieAdapter(val data: (Movie, ImageView) -> Unit) : ListAdapter<Movie, MovieAdapter.MovieViewHolder>(DIFF_CALLBACK) {
 

@@ -44,7 +44,7 @@
         tools:text="Now Playing"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_trending"
+        android:id="@+id/rv_now_playing"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginTop="8dp"
@@ -68,7 +68,7 @@
         android:textStyle="bold"
         app:drawableEndCompat="@drawable/ic_chevron_right"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_trending"
+        app:layout_constraintTop_toBottomOf="@id/rv_now_playing"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView

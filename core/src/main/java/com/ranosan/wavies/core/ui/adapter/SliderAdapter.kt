@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ranosan.wavies.core.databinding.ItemImageSliderBinding
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.ui.adapter.MovieAdapter.Companion.DIFF_CALLBACK
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
 
 class SliderAdapter(val data: (Movie, ImageView) -> Unit) : ListAdapter<Movie, SliderAdapter.SliderViewHolder>(DIFF_CALLBACK) {
 

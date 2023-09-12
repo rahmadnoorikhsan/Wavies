@@ -12,8 +12,8 @@ import androidx.navigation.navArgs
 import com.ranosan.wavies.R
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.utils.DataMapper
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
-import com.ranosan.wavies.core.utils.Extentions.toAnotherDate
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.toAnotherDate
 import com.ranosan.wavies.databinding.ActivityDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
