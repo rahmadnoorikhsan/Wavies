@@ -1,15 +1,21 @@
 version: 2.1
 
 orbs:
-  android: circleci/android@0.2.1
+  android: circleci/android@2.3.0
 
 jobs:
   build:
-    executor: android/android
+    executor:
+      name: android/android-machine
+      resource-class: large
+      tag: 2023.07.1
     steps:
       - checkout
+      - run: java --version
       - restore_cache:
           key: android-orb-v1-
+      - android/change-java-version:
+          java-version: 17
       - run:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
