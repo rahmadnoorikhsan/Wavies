@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ranosan.wavies.core.databinding.ItemImageSliderBinding
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.ui.adapter.MovieAdapter.Companion.DIFF_CALLBACK
-import com.ranosan.wavies.core.utils.DataMapper
-import com.ranosan.wavies.core.utils.Extentions.addChips
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
 
 class SliderAdapter(val data: (Movie, ImageView) -> Unit) : ListAdapter<Movie, SliderAdapter.SliderViewHolder>(DIFF_CALLBACK) {
 
@@ -29,11 +27,7 @@ class SliderAdapter(val data: (Movie, ImageView) -> Unit) : ListAdapter<Movie, S
             binding.apply {
                 itemView.setOnClickListener { data.invoke(movie, ivSlider) }
                 ivSlider.showImageInto(itemView.context, movie.posterPath)
-                cgGenres.removeAllViews()
-                DataMapper.mapGenreIdToGenre(movie.genreIds)
-                    .filterNotNull()
-                    .take(3)
-                    .forEach {cgGenres.addChips(itemView.context, it)}
+                tvTitle.text = movie.title
             }
         }
     }

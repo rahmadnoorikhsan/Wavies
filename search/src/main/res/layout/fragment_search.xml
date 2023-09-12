@@ -41,6 +41,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+    
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shimmer_auto_start="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_movie_horizontal" />
+            <include layout="@layout/shimmer_movie_horizontal" />
+            <include layout="@layout/shimmer_movie_horizontal" />
+            <include layout="@layout/shimmer_movie_horizontal" />
+            <include layout="@layout/shimmer_movie_horizontal" />
+            <include layout="@layout/shimmer_movie_horizontal" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lt_search"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="search.json"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_search_empty"
+        tools:visibility="visible"/>
 
     <TextView
         android:id="@+id/tv_search_empty"
@@ -50,6 +90,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         android:text="@string/find_your_favorite_movie"
+        app:layout_constraintVertical_bias="0.55"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

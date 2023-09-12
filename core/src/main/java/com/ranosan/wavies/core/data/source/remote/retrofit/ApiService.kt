@@ -2,7 +2,6 @@ package com.ranosan.wavies.core.data.source.remote.retrofit
 
 import com.ranosan.wavies.core.data.source.remote.response.MovieResponse
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {

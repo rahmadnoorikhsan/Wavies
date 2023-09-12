@@ -1,22 +1,19 @@
 package com.ranosan.wavies.ui.detail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.navigation.ActivityNavigator
 import androidx.navigation.navArgs
 import com.ranosan.wavies.R
-import com.ranosan.wavies.core.data.repository.Resource
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.utils.DataMapper
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
-import com.ranosan.wavies.core.utils.Extentions.showThumbnailInto
-import com.ranosan.wavies.core.utils.Extentions.toAnotherDate
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.toAnotherDate
 import com.ranosan.wavies.databinding.ActivityDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 

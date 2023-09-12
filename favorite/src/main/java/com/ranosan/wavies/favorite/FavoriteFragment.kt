@@ -81,6 +81,7 @@ class FavoriteFragment : Fragment() {
 
     private fun isMoviesEmpty(isEmpty: Boolean) {
         binding?.apply {
+            ltEmpty.isVisible = isEmpty
             tvNoData.isVisible = isEmpty
         }
     }

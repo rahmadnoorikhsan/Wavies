@@ -8,7 +8,7 @@ import com.ranosan.wavies.core.utils.Converters
 
 @Database(
     entities = [MovieEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)

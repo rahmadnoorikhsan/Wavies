@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ranosan.wavies.core.databinding.ItemMovieGridBinding
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.ui.adapter.MovieAdapter.Companion.DIFF_CALLBACK
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
 
 class MoviePagingAdapter(
     private val data: (Movie, ImageView) -> Unit

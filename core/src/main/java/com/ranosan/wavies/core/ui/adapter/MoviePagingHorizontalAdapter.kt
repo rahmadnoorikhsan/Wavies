@@ -7,8 +7,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ranosan.wavies.core.databinding.ItemMovieHorizontalBinding
 import com.ranosan.wavies.core.domain.model.Movie
-import com.ranosan.wavies.core.utils.Extentions.showImageInto
-import com.ranosan.wavies.core.utils.Extentions.toAnotherDate
+import com.ranosan.wavies.core.utils.Extensions.showImageInto
+import com.ranosan.wavies.core.utils.Extensions.toAnotherDate
 
 class MoviePagingHorizontalAdapter (
     private val data: (Movie, ImageView) -> Unit

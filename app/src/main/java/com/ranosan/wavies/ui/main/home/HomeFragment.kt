@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
                 }
                 is Resource.Loading -> {}
                 is Resource.Success -> {
-                    adapter.submitList(resources.data)
+                    adapter.submitList(resources.data.take(5))
                 }
             }
         }
@@ -123,13 +123,13 @@ class HomeFragment : Fragment() {
             moveToDetail(movie, imageView)
         }
         binding?.contentHome?.apply {
-            rvTrending.layoutManager = LinearLayoutManager(
+            rvNowPlaying.layoutManager = LinearLayoutManager(
                 context, LinearLayoutManager.HORIZONTAL, false
             )
-            rvTrending.setHasFixedSize(true)
-            rvTrending.adapter = adapter
+            rvNowPlaying.setHasFixedSize(true)
+            rvNowPlaying.adapter = adapter
         }
-        viewModel.trendingMovies.observe(viewLifecycleOwner) { resources ->
+        viewModel.nowPlayingMovies.observe(viewLifecycleOwner) { resources ->
             when (resources) {
                 is Resource.Error -> {}
                 is Resource.Loading -> {}
@@ -217,8 +217,8 @@ class HomeFragment : Fragment() {
         binding?.contentHome?.vpImage?.setPageTransformer(transformer)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 }

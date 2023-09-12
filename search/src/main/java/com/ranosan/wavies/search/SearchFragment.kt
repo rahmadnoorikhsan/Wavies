@@ -15,6 +15,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.ActivityNavigatorExtras
 import androidx.navigation.fragment.findNavController
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ranosan.wavies.core.domain.model.Movie
 import com.ranosan.wavies.core.ui.adapter.LoadingStateAdapter
@@ -97,9 +98,11 @@ class SearchFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             movieAdapter.loadStateFlow.collectLatest {
                 isMoviesEmpty(false)
+                isOnLoading(it.refresh is LoadState.Loading)
             }
         }
         viewModel.resultData.observe(viewLifecycleOwner) {
+            isOnLoading(false)
             movieAdapter.submitData(lifecycle, it)
         }
     }
@@ -116,7 +119,18 @@ class SearchFragment : Fragment() {
 
     private fun isMoviesEmpty(isEmpty: Boolean) {
         binding?.apply {
+            ltSearch.isVisible = isEmpty
             tvSearchEmpty.isVisible = isEmpty
         }
+    }
+
+    private fun isOnLoading(isLoading: Boolean) {
+        binding?.shimmer?.isVisible = isLoading
+        binding?.rvSearch?.isVisible = !isLoading
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
