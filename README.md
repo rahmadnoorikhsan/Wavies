@@ -19,12 +19,11 @@ This project provide the security, such as :
 ## Preview :
 <table>
     <tr>
-        <td><img src="screenshot/record.gif" align="center" alt="4"</td>
         <td><img src="screenshot/home.jpg" align="center" alt="4"</td>
         <td><img src="screenshot/detail.jpg" align="center" alt="4"</td>
+        <td><img src="screenshot/now playing.jpg" align="center" alt="4"</td>
     </tr>
     <tr>
-        <td><img src="screenshot/now playing.jpg" align="center" alt="4"</td>
         <td><img src="screenshot/searching.jpg" align="center" alt="4"</td>
          <td><img src="screenshot/favorite.jpg" align="center" alt="4"</td>
    </tr>
