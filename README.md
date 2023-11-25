@@ -1,7 +1,7 @@
 # Wavies
 This project is First & Final Submission on Menjadi Android Developer Expert (MADE) class Dicoding Academy
 
-> **Warning**
+> [!Warning]
 > USE THIS PROJECT AS A REFERENCE FOR YOUR SUBMISSION. DO NOT SEND OR COPY PASTE THIS PROJECT FOR YOUR SUBMISSION!
 
 ## Architecture
